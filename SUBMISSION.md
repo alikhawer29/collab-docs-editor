@@ -49,13 +49,12 @@ Open http://localhost:3000. **Enter as Khawer** is the fastest start. **Review a
 ## What is incomplete
 
 - Live app: https://collab-docs-editor-three.vercel.app . Login and the seeded documents work. New documents may disappear after the Vercel instance shuts down, because storage is a local file. Local `npm run dev` keeps them in `data/folio.json`.
-- No walkthrough video yet. `WALKTHROUGH_URL.txt` has the outline to record.
 - No realtime co-editing. Two people can edit, and the second stale save is blocked instead of merged.
 - No `.docx`, images, comments, or version history.
 
 ## Next 2–4 hours
 
-1. Record the walkthrough. A later host with one Node process and a persistent disk would keep new documents across restarts.
+1. Move the live app to one Node process with `FOLIO_DATA_PATH` on a persistent disk, so new documents survive a restart.
 2. Add a short version history from the existing revision counter.
 3. Show who else has the document open, without building a collaborative merge.
 
@@ -65,4 +64,4 @@ https://collab-docs-editor-three.vercel.app
 
 ## Walkthrough
 
-See `WALKTHROUGH_URL.txt`.
+https://www.loom.com/share/69ba45bd4fd548f18fb62d799df196e0
