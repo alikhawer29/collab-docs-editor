@@ -1,0 +1,11 @@
+Paste the public walkthrough URL on the first line, then delete this note.
+
+Record 3–5 minutes (unlisted Loom or YouTube is fine):
+
+1. Enter as Khawer and open Product kickoff. Show formatting, autosave, and a refresh.
+2. Import examples/kickoff.md.
+3. Show Share: Alex can edit, Sam can view.
+4. Review as Sam and show that Product kickoff is read-only.
+5. Review as Alex and edit the shared document.
+6. Say what was left out: realtime cursors, comments, version history, and .docx.
+7. Say how AI was used: scoped the editor and sharing, rejected a hosted database and silent overwrites, then checked with tests and a browser pass.

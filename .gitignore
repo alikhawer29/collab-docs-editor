@@ -1,0 +1,8 @@
+node_modules
+.next
+data/*.json
+data/*.tmp
+.env
+.env.local
+*.log
+tsconfig.tsbuildinfo

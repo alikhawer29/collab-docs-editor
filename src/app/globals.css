@@ -1,0 +1,126 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.btn {
+  @apply inline-flex items-center justify-center gap-2 rounded-full px-4 py-2 text-sm font-semibold transition disabled:cursor-not-allowed disabled:opacity-50;
+}
+
+.btn-primary {
+  @apply bg-pine-800 text-sheet hover:bg-pine-900;
+}
+
+.btn-secondary {
+  @apply border border-line bg-sheet text-ink hover:border-pine-700;
+}
+
+.btn-danger {
+  @apply bg-danger text-white hover:bg-red-900;
+}
+
+.btn-quiet {
+  @apply text-muted hover:text-ink;
+}
+
+.field {
+  @apply w-full rounded-xl border border-line bg-white px-3 py-2 text-base text-ink outline-none ring-pine-700 placeholder:text-muted focus:ring-2;
+}
+
+.tool {
+  @apply rounded-lg px-2.5 py-1.5 text-sm font-semibold text-ink hover:bg-paper disabled:opacity-40;
+}
+
+.tool[aria-pressed="true"] {
+  @apply bg-pine-800 text-sheet hover:bg-pine-800;
+}
+
+.folio-editor {
+  min-height: 58vh;
+  outline: none;
+  font-family: var(--font-serif), Georgia, serif;
+  font-size: 1.125rem;
+  line-height: 1.75;
+  color: #1c1916;
+}
+
+.folio-editor:focus {
+  outline: none;
+}
+
+.folio-editor h1,
+.folio-editor h2,
+.folio-editor h3 {
+  font-family: var(--font-display), Georgia, serif;
+  font-weight: 500;
+  line-height: 1.25;
+}
+
+.folio-editor h1 {
+  margin: 0.4rem 0 0.8rem;
+  font-size: 2.15rem;
+}
+
+.folio-editor h2 {
+  margin: 1.4rem 0 0.55rem;
+  font-size: 1.55rem;
+}
+
+.folio-editor h3 {
+  margin: 1.2rem 0 0.45rem;
+  font-size: 1.25rem;
+}
+
+.folio-editor p {
+  margin: 0.75rem 0;
+}
+
+.folio-editor ul,
+.folio-editor ol {
+  margin: 0.75rem 0;
+  padding-left: 1.35rem;
+}
+
+.folio-editor ul {
+  list-style: disc;
+}
+
+.folio-editor ol {
+  list-style: decimal;
+}
+
+.folio-editor li {
+  margin: 0.2rem 0;
+}
+
+.folio-editor li p {
+  margin: 0.15rem 0;
+}
+
+.folio-editor strong,
+.folio-editor b {
+  font-weight: 650;
+}
+
+.folio-editor u {
+  text-underline-offset: 0.15em;
+}
+
+.folio-editor ::selection {
+  background: #d5ebe6;
+}
+
+.folio-editor p.is-editor-empty:first-child::before {
+  float: left;
+  height: 0;
+  color: #a3988d;
+  content: attr(data-placeholder);
+  pointer-events: none;
+}
+
+summary {
+  list-style: none;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}

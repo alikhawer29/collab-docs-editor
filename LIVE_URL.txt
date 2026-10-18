@@ -1,0 +1,23 @@
+Paste the deployed URL on the first line, then delete this note.
+
+Deploy one long-lived Node process. Do not use a serverless host: Folio stores documents in a JSON file and expects a single instance.
+
+Minimum environment:
+
+- NODE_ENV=production
+- SESSION_SECRET set to a long random string
+- COOKIE_SECURE=true only if the site is served over HTTPS
+- FOLIO_DATA_PATH pointed at a persistent disk if new drafts must survive a restart
+
+Local production check:
+
+npm run build
+set SESSION_SECRET=a-long-random-string
+npm start
+
+Docker:
+
+docker build -t folio .
+docker run --rm -p 3000:3000 -e SESSION_SECRET=a-long-random-string -v folio-data:/app/data folio
+
+Until this file has a URL, reviewers can run the app locally with the steps in README.md.
